@@ -2,122 +2,151 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>BHR Solutions</title>
+  <title>BHR Solutions – Services à domicile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #222;
+    :root {
+      --blue: #0b4fa2;
+      --green: #25D366;
+      --dark: #222;
+      --light: #f4f6f8;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    /* HEADER */
     header {
-      background: #0b4fa2;
+      background: linear-gradient(135deg, #0b4fa2, #083b7a);
       color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 60px 20px 40px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 38px;
+      letter-spacing: 1px;
     }
 
     header p {
-      margin-top: 10px;
+      margin: 10px 0 0;
       font-size: 18px;
+      opacity: 0.95;
     }
 
-    .buttons {
-      margin-top: 20px;
+    /* CONTACT BUTTONS */
+    .contact-bar {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    .btn {
-      display: inline-block;
-      margin: 8px;
-      padding: 14px 22px;
-      background: #25D366;
-      color: white;
+    .contact-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
     }
 
-    .btn.phone {
-      background: #333;
+    .contact-btn:hover {
+      transform: scale(1.08);
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 1100px;
+    .whatsapp { background: var(--green); }
+    .email { background: #555; }
+
+    /* HERO IMAGE */
+    .hero {
+      margin-top: -30px;
+      padding: 0 20px;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 1000px;
+      display: block;
       margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
     }
 
     h2 {
       text-align: center;
       margin-bottom: 30px;
-    }
-
-    .box {
-      background: white;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
+      font-size: 28px;
+      color: var(--blue);
     }
 
     ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
-    li {
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
+    ul li {
+      padding: 12px 0;
       font-size: 18px;
+      border-bottom: 1px solid #eee;
     }
 
-    li:last-child {
+    ul li:last-child {
       border-bottom: none;
     }
 
-    .hero-image {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .hero-image img {
-      width: 100%;
-      max-width: 900px;
-      border-radius: 18px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    }
-
+    /* GALLERY */
     .gallery {
-      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
 
-    .gallery-images {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .gallery-images img {
+    .gallery img {
       width: 100%;
-      max-width: 320px;
-      margin: 10px;
-      border-radius: 14px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
+    /* FOOTER */
     footer {
+      background: #eaeaea;
       text-align: center;
-      padding: 25px;
-      background: #eee;
+      padding: 30px 20px;
       font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
@@ -126,76 +155,71 @@
 
 <header>
   <h1>BHR Solutions</h1>
-  <p>Dépannage & services à domicile — 7j/7 • 24h/24</p>
-  <p>Herstellingen & diensten aan huis — 7/7 • 24/24</p>
+  <p>Dépannage & services à domicile — 24h/24 • 7j/7</p>
+  <p>Herstellingen & diensten aan huis — 24/7</p>
 
-  <div class="buttons">
-    <a class="btn" href="https://wa.me/32476289350">WhatsApp 1</a>
-    <a class="btn" href="https://wa.me/32476289350">WhatsApp 2</a>
-    <a class="btn phone" href="tel:+32476289350">📞 0476 28 93 50</a>
-    <a class="btn phone" href="mailto:BHRSOLUTIONS2025@outlook.com">✉️ Email</a>
+  <div class="contact-bar">
+    <a class="contact-btn whatsapp" href="https://wa.me/32476289350" aria-label="WhatsApp">🟢</a>
+    <a class="contact-btn whatsapp" href="https://wa.me/32492796198" aria-label="WhatsApp">🟢</a>
+    <a class="contact-btn email" href="mailto:BHRSOLUTIONS2025@outlook.com" aria-label="Email">✉️</a>
   </div>
 </header>
 
-<!-- PHOTO CAMIONNETTE -->
-<section class="hero-image">
+<div class="hero">
   <img src="camionnette.PNG" alt="Camionnette BHR Solutions">
-</section>
+</div>
 
-<section class="box">
-  <h2>Nos services</h2>
-  <ul>
-    <li>✔ Dépannage à domicile</li>
-    <li>✔ Électricité</li>
-    <li>✔ Plomberie</li>
-    <li>✔ Petites réparations</li>
-    <li>✔ Installations & rénovations</li>
-    <li>✔ Interventions rapides</li>
-    <li>✔ Débarras & vide-grenier</li>
-    <li>✔ Jardinage</li>
-  </ul>
-</section>
+<section>
+  <div class="card">
+    <h2>Nos services</h2>
+    <ul>
+      <li>✔ Dépannage à domicile</li>
+      <li>✔ Électricité</li>
+      <li>✔ Plomberie</li>
+      <li>✔ Petites réparations</li>
+      <li>✔ Installations & rénovations</li>
+      <li>✔ Débarras & vide-maison</li>
+      <li>✔ Jardinage & entretien extérieur</li>
+    </ul>
+  </div>
 
-<section class="box">
-  <h2>Onze diensten</h2>
-  <ul>
-    <li>✔ Herstellingen aan huis</li>
-    <li>✔ Elektriciteit</li>
-    <li>✔ Loodgieterij</li>
-    <li>✔ Kleine herstellingen</li>
-    <li>✔ Installaties & renovaties</li>
-    <li>✔ Snelle interventies</li>
-    <li>✔ Ontruiming & opruiming</li>
-    <li>✔ Tuinonderhoud</li>
-  </ul>
-</section>
+  <div class="card">
+    <h2>Onze diensten</h2>
+    <ul>
+      <li>✔ Herstellingen aan huis</li>
+      <li>✔ Elektriciteit</li>
+      <li>✔ Loodgieterij</li>
+      <li>✔ Kleine herstellingen</li>
+      <li>✔ Installaties & renovaties</li>
+      <li>✔ Ontruiming & opruiming</li>
+      <li>✔ Tuinonderhoud</li>
+    </ul>
+  </div>
 
-<section class="gallery">
-  <h2>Nos interventions</h2>
-  <p>Interventions professionnelles réalisées avec sérieux.</p>
-  <p>Professionele interventies met vakmanschap uitgevoerd.</p>
+  <div class="card">
+    <h2>Qui sommes-nous / Wie zijn wij</h2>
+    <p>
+      <strong>BHR Solutions</strong> est une entreprise spécialisée dans les services
+      et dépannages à domicile. Nous intervenons rapidement, avec sérieux et professionnalisme.
+    </p>
+    <p>
+      <strong>BHR Solutions</strong> is een bedrijf gespecialiseerd in herstellingen
+      en diensten aan huis, met focus op kwaliteit en klanttevredenheid.
+    </p>
+  </div>
 
-  <div class="gallery-images">
-    <img src="intervention1.PNG" alt="Intervention BHR Solutions">
-    <img src="intervention2.PNG" alt="Intervention BHR Solutions">
-    <img src="intervention3.PNG" alt="Intervention BHR Solutions">
+  <div class="card">
+    <h2>Nos interventions</h2>
+    <div class="gallery">
+      <img src="intervention1.PNG" alt="Intervention BHR Solutions">
+      <img src="intervention2.PNG" alt="Intervention BHR Solutions">
+      <img src="intervention3.PNG" alt="Intervention BHR Solutions">
+    </div>
   </div>
 </section>
 
-<section class="box">
-  <h2>Qui sommes-nous / Wie zijn wij</h2>
-  <p>
-    <strong>BHR Solutions</strong> est une entreprise spécialisée dans le dépannage
-    et les services à domicile, disponible 7j/7 et 24h/24.
-  </p>
-  <p>
-    <strong>BHR Solutions</strong> is een bedrijf gespecialiseerd in herstellingen
-    en diensten aan huis, 7/7 en 24/24 beschikbaar.
-  </p>
-</section>
-
 <footer>
-  © 2026 BHR Solutions — Tous droits réservés / Alle rechten voorbehouden
+  © 2026 BHR Solutions — Tous droits réservés
 </footer>
 
 </body>
