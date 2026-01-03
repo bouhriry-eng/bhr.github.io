@@ -2,35 +2,35 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>BHR Solutions – Dépannage 24/7</title>
+  <title>BHR Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f4f6f8;
       color: #222;
     }
 
     /* HERO */
     .hero {
-      background:
-        linear-gradient(rgba(0, 80, 160, 0.65), rgba(0, 80, 160, 0.65)),
-        url("camionnette.PNG") center/cover no-repeat;
-      color: white;
+      background: url("camionnette.PNG") center/cover no-repeat;
       text-align: center;
-      padding: 80px 20px;
+      padding: 90px 20px;
+      color: white;
     }
 
     .hero h1 {
-      font-size: 38px;
+      font-size: 42px;
       margin-bottom: 10px;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.7);
     }
 
     .hero p {
       font-size: 18px;
-      margin: 6px 0;
+      margin: 8px 0;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
     }
 
     /* BUTTONS */
@@ -38,47 +38,45 @@
       margin-top: 25px;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 15px;
+      flex-wrap: wrap;
     }
 
     .btn {
-      padding: 14px 22px;
+      padding: 14px 26px;
       border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
       font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
       display: inline-block;
     }
 
-    .btn-whatsapp {
-      background: #25d366;
-      color: white;
+    .whatsapp {
+      background: #25D366;
     }
 
-    .btn-mail {
+    .email {
       background: #444;
-      color: white;
     }
 
     /* SECTIONS */
-    .section {
-      padding: 50px 20px;
+    section {
       max-width: 1000px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    .section h2 {
+    h2 {
       text-align: center;
-      font-size: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     /* SERVICES */
     .services {
       background: white;
       border-radius: 16px;
-      padding: 30px;
+      padding: 25px;
     }
 
     .services ul {
@@ -88,27 +86,15 @@
     }
 
     .services li {
-      font-size: 18px;
       padding: 12px 0;
       border-bottom: 1px solid #eee;
-    }
-
-    .services li:last-child {
-      border-bottom: none;
-    }
-
-    /* ABOUT */
-    .about {
-      background: white;
-      border-radius: 16px;
-      padding: 30px;
-      line-height: 1.7;
+      font-size: 17px;
     }
 
     /* GALLERY */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
     }
 
@@ -122,9 +108,8 @@
     footer {
       text-align: center;
       padding: 25px;
-      background: #0a3d7a;
-      color: white;
-      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -135,85 +120,51 @@
   <div class="hero">
     <h1>BHR Solutions</h1>
 
-    <p><strong>Dépannage & services à domicile</strong> — 24h/24 • 7j/7</p>
-    <p><strong>Herstellingen & diensten aan huis</strong> — 24/7</p>
+    <p>Dépannage & services à domicile — <strong>24h/24 • 7j/7</strong></p>
+    <p>Herstellingen & diensten aan huis — <strong>24/7</strong></p>
 
     <div class="buttons">
-      <a class="btn btn-whatsapp" href="https://wa.me/32476289350" target="_blank">
-        WhatsApp
+      <a class="btn whatsapp" href="https://wa.me/32492796198" target="_blank">
+        WhatsApp 1
       </a>
 
-      <a class="btn btn-whatsapp" href="https://wa.me/32492796198" target="_blank">
-        WhatsApp
+      <a class="btn whatsapp" href="https://wa.me/32476289350" target="_blank">
+        WhatsApp 2
       </a>
 
-      <a class="btn btn-mail" href="mailto:BHRSOLUTIONS2025@outlook.com">
+      <a class="btn email" href="mailto:BHRSOLUTIONS2025@outlook.com">
         Email
       </a>
     </div>
   </div>
 
   <!-- SERVICES -->
-  <div class="section">
-    <h2>Nos services / Onze diensten</h2>
+  <section class="services">
+    <h2>Nos services</h2>
+    <ul>
+      <li>✔ Dépannage à domicile</li>
+      <li>✔ Électricité</li>
+      <li>✔ Plomberie</li>
+      <li>✔ Petites réparations</li>
+      <li>✔ Installations & rénovations</li>
+      <li>✔ Débarras & vide-grenier</li>
+      <li>✔ Jardinage & entretien extérieur</li>
+      <li>✔ Interventions rapides 24h/24 – 7j/7</li>
+    </ul>
+  </section>
 
-    <div class="services">
-      <ul>
-        <li>✔ Dépannage à domicile</li>
-        <li>✔ Électricité</li>
-        <li>✔ Plomberie</li>
-        <li>✔ Petites réparations</li>
-        <li>✔ Installations & rénovations</li>
-        <li>✔ Déblayage & vide grenier</li>
-        <li>✔ Jardinage</li>
-        <li>✔ Interventions rapides</li>
-      </ul>
-
-      <hr style="margin:30px 0">
-
-      <ul>
-        <li>✔ Herstellingen aan huis</li>
-        <li>✔ Elektriciteit</li>
-        <li>✔ Loodgieterij</li>
-        <li>✔ Kleine herstellingen</li>
-        <li>✔ Installaties & renovaties</li>
-        <li>✔ Ontruiming & leegmaken</li>
-        <li>✔ Tuinonderhoud</li>
-        <li>✔ Snelle interventies</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <div class="section">
-    <h2>Qui sommes-nous / Wie zijn wij</h2>
-
-    <div class="about">
-      <p>
-        <strong>BHR Solutions</strong> est une entreprise spécialisée dans les services
-        et dépannages à domicile. Nous intervenons rapidement avec sérieux et professionnalisme,
-        24h/24 et 7j/7.
-      </p>
-
-      <p>
-        <strong>BHR Solutions</strong> is een bedrijf gespecialiseerd in herstellingen
-        en diensten aan huis. Wij bieden een snelle, betrouwbare en professionele service,
-        24/7 beschikbaar.
-      </p>
-    </div>
-  </div>
-
-  <!-- INTERVENTIONS -->
-  <div class="section">
-    <h2>Nos interventions / Onze interventies</h2>
+  <!-- PHOTOS -->
+  <section>
+    <h2>Nos interventions</h2>
 
     <div class="gallery">
       <img src="intervention1.PNG" alt="Intervention BHR Solutions">
       <img src="intervention2.PNG" alt="Intervention BHR Solutions">
       <img src="intervention3.PNG" alt="Intervention BHR Solutions">
     </div>
-  </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
     © 2026 BHR Solutions — Tous droits réservés
   </footer>
