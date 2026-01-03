@@ -1,152 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>BHR Solutions – Services à domicile</title>
+  <meta charset="UTF-8" />
+  <title>BHR Solutions – Dépannage à domicile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    :root {
-      --blue: #0b4fa2;
-      --green: #25D366;
-      --dark: #222;
-      --light: #f4f6f8;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: var(--light);
-      color: var(--dark);
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
     }
 
-    /* HEADER */
     header {
-      background: linear-gradient(135deg, #0b4fa2, #083b7a);
+      background: linear-gradient(135deg, #0b4fa2, #0e6ddf);
       color: white;
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 40px 20px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 38px;
-      letter-spacing: 1px;
+      font-size: 34px;
     }
 
     header p {
-      margin: 10px 0 0;
-      font-size: 18px;
-      opacity: 0.95;
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 1.4;
     }
 
-    /* CONTACT BUTTONS */
-    .contact-bar {
-      margin-top: 30px;
+    .buttons {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 15px;
+      margin-top: 25px;
       flex-wrap: wrap;
     }
 
-    .contact-btn {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
+    .btn {
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-weight: bold;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      text-decoration: none;
+      gap: 8px;
+    }
+
+    .whatsapp {
+      background: #25D366;
       color: white;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
     }
 
-    .contact-btn:hover {
-      transform: scale(1.08);
+    .email {
+      background: #444;
+      color: white;
     }
 
-    .whatsapp { background: var(--green); }
-    .email { background: #555; }
-
-    /* HERO IMAGE */
-    .hero {
-      margin-top: -30px;
-      padding: 0 20px;
-    }
-
-    .hero img {
-      width: 100%;
+    .section {
+      padding: 40px 20px;
       max-width: 1000px;
-      display: block;
       margin: auto;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
     }
 
-    /* SECTIONS */
-    section {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 18px;
-      padding: 40px 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      margin-bottom: 40px;
-    }
-
-    h2 {
+    .section h2 {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 28px;
-      color: var(--blue);
+      margin-bottom: 25px;
+      font-size: 26px;
     }
 
-    ul {
+    .services {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .services ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
-    ul li {
+    .services li {
       padding: 12px 0;
-      font-size: 18px;
       border-bottom: 1px solid #eee;
+      font-size: 17px;
     }
 
-    ul li:last-child {
+    .services li:last-child {
       border-bottom: none;
-    }
-
-    /* GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
     }
 
     .gallery img {
       width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    /* FOOTER */
     footer {
-      background: #eaeaea;
       text-align: center;
-      padding: 30px 20px;
+      padding: 25px;
       font-size: 14px;
-      color: #555;
+      color: #666;
     }
   </style>
 </head>
@@ -155,67 +113,45 @@
 
 <header>
   <h1>BHR Solutions</h1>
-  <p>Dépannage & services à domicile — 24h/24 • 7j/7</p>
-  <p>Herstellingen & diensten aan huis — 24/7</p>
+  <p>
+    Dépannage & services à domicile — <strong>24h/24 • 7j/7</strong><br>
+    Herstellingen & diensten aan huis — <strong>24/7</strong>
+  </p>
 
-  <div class="contact-bar">
-    <a class="contact-btn whatsapp" href="https://wa.me/32476289350" aria-label="WhatsApp">🟢</a>
-    <a class="contact-btn whatsapp" href="https://wa.me/32492796198" aria-label="WhatsApp">🟢</a>
-    <a class="contact-btn email" href="mailto:BHRSOLUTIONS2025@outlook.com" aria-label="Email">✉️</a>
+  <div class="buttons">
+    <a class="btn whatsapp" href="https://wa.me/32476289350" target="_blank">
+      WhatsApp 1
+    </a>
+
+    <a class="btn whatsapp" href="https://wa.me/32492796198" target="_blank">
+      WhatsApp 2
+    </a>
+
+    <a class="btn email" href="mailto:BHRSOLUTIONS2025@outlook.com">
+      Email
+    </a>
   </div>
 </header>
 
-<div class="hero">
-  <img src="camionnette.PNG" alt="Camionnette BHR Solutions">
-</div>
-
-<section>
-  <div class="card">
-    <h2>Nos services</h2>
+<section class="section">
+  <h2>Nos services</h2>
+  <div class="services">
     <ul>
       <li>✔ Dépannage à domicile</li>
       <li>✔ Électricité</li>
       <li>✔ Plomberie</li>
-      <li>✔ Petites réparations</li>
+      <li>✔ Réparations urgentes</li>
       <li>✔ Installations & rénovations</li>
-      <li>✔ Débarras & vide-maison</li>
+      <li>✔ Vide maison & déblayage</li>
       <li>✔ Jardinage & entretien extérieur</li>
+      <li>✔ Interventions rapides 24h/24 – 7j/7</li>
     </ul>
   </div>
+</section>
 
-  <div class="card">
-    <h2>Onze diensten</h2>
-    <ul>
-      <li>✔ Herstellingen aan huis</li>
-      <li>✔ Elektriciteit</li>
-      <li>✔ Loodgieterij</li>
-      <li>✔ Kleine herstellingen</li>
-      <li>✔ Installaties & renovaties</li>
-      <li>✔ Ontruiming & opruiming</li>
-      <li>✔ Tuinonderhoud</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Qui sommes-nous / Wie zijn wij</h2>
-    <p>
-      <strong>BHR Solutions</strong> est une entreprise spécialisée dans les services
-      et dépannages à domicile. Nous intervenons rapidement, avec sérieux et professionnalisme.
-    </p>
-    <p>
-      <strong>BHR Solutions</strong> is een bedrijf gespecialiseerd in herstellingen
-      en diensten aan huis, met focus op kwaliteit en klanttevredenheid.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Nos interventions</h2>
-    <div class="gallery">
-      <img src="intervention1.PNG" alt="Intervention BHR Solutions">
-      <img src="intervention2.PNG" alt="Intervention BHR Solutions">
-      <img src="intervention3.PNG" alt="Intervention BHR Solutions">
-    </div>
-  </div>
+<section class="section gallery">
+  <h2>Nos interventions</h2>
+  <img src="camionnette.PNG" alt="Camionnette BHR Solutions">
 </section>
 
 <footer>
